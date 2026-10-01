@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<!--
+  index.html — page structure.
+  Names, links, skills, projects, timeline etc. are filled in by js/script.js
+  from the content block at the top of that file. Edit your content THERE.
+  Edit this file only to change the hero/About wording or the page layout.
+-->
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shri — Student &amp; Software Developer</title>
+  <meta name="description" content="Shri is a student and aspiring software developer building local AI tools, web projects and games.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Shri — Student & Software Developer">
+  <meta property="og:description" content="Building local AI tools, web projects and games.">
+  <!-- After deploying, add: <meta property="og:image" content="https://YOUR-SITE/assets/images/og.png"> -->
+  <meta name="theme-color" content="#f7f3ed">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232b2420'/%3E%3Ctext x='16' y='23' font-size='20' font-family='serif' font-weight='700' text-anchor='middle' fill='%23f7f3ed'%3ES%3C/text%3E%3C/svg%3E">
+  <!-- Applies the saved/system theme before the page paints (prevents a flash) -->
+  <script>
+    (function () {
+      var t; try { t = localStorage.getItem("theme"); } catch (e) {}
+      if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.dataset.theme = t;
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Side indicator: shows where you are on the page (dots are built in script.js) -->
+  <nav class="side-nav" aria-label="Page position">
+    <div class="side-track"><div class="side-fill"></div></div>
+    <ul id="side-dots"></ul>
+  </nav>
+
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="Main">
+      <a class="logo" href="#home">Shri</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#journey">Journey</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode" aria-pressed="false">
+          <i class="i-moon" data-icon="moon"></i><i class="i-sun" data-icon="sun"></i>
+        </button>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><span></span><span></span></button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero s-bg" id="home">
+      <svg class="deco-curve" viewBox="0 0 120 420" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><path pathLength="1" d="M0 8 C 95 40, 112 200, 62 300 S 12 400, 0 412"/></svg>
+      <i class="spark spark-1" data-icon="sparkle" aria-hidden="true"></i>
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="hello hero-in" style="--hd:.1s">Hello, I'm</p>
+          <h1 class="hero-name split" id="hero-name">Aryan.</h1>
+          <p class="hero-role hero-in" style="--hd:.9s">Student &amp; Aspiring Software Developer</p>
+          <p class="hero-text hero-in" style="--hd:1.05s">
+            An IT honours student interested in AI, Web-development and Designing.
+            Currently exploring about Neural Networks, AI/ML/JEV and Data Structures & Algorithms.
+          </p>
+          <div class="hero-actions hero-in" style="--hd:1.2s">
+            <a class="btn btn-solid" href="#projects">View Projects <i data-icon="arrow"></i></a>
+            <a class="btn btn-ghost" href="#contact">Contact Me</a>
+          </div>.
+          <ul class="icon-links hero-in" id="hero-socials" style="--hd:1.35s"></ul>
+        </div>
+        <div class="hero-visual">
+          <p class="note note-top">Just a learning<br>individual</p>
+          <svg class="note-arrow" viewBox="0 0 50 40" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><path d="M44 4 C 38 22, 22 30, 6 32 M6 32 l9 -7 M6 32 l10 4"/></svg>
+          <div class="avatar">
+            <figure class="avatar-inner" id="photo"><span class="avatar-ph">[ADD PROFILE IMAGE]</span></figure>
+          </div>
+          <p class="status"><span class="dot"></span><span>Currently learning:<br><span id="building"></span></span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section s-soft" id="about">
+      <div class="wrap about-grid">
+        <div>
+          <p class="eyebrow rv">About me</p>
+          <h2 class="rv" style="--d:1">A bit about me</h2>
+          <p class="rv" style="--d:2">I'm a student with a deep interest in software development, AI, web development, game development and problem solving.</p>
+          <p class="rv" style="--d:3">I enjoy understanding how things work and building projects that bring ideas to life.</p>
+          <p class="rv" style="--d:4">Right now, I'm focused on improving my skills, working on personal projects, and exploring new technologies that help me grow as a developer.</p>
+        </div>
+        <div class="about-side">
+          <ul class="card facts rv" id="facts" data-stagger style="--d:2"></ul>
+          <p class="note note-about rv" style="--d:4">Better<br>code,<br>better<br>tomorrows.
+            <svg viewBox="0 0 80 10" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><path d="M2 6 Q 20 0 40 6 T 78 5"/></svg>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section s-band" id="skills">
+      <div class="wrap">
+        <div class="sec-head">
+          <div><p class="eyebrow rv">Skills</p><h2 class="rv" style="--d:1">Technologies &amp; Tools</h2></div>
+          <div class="tabs rv" id="tabs" role="group" aria-label="Skill level" style="--d:2"></div>
+        </div>
+        <div class="grid grid-4" id="skills-grid" data-stagger></div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section s-soft" id="projects">
+      <div class="wrap">
+        <div class="sec-head">
+          <div><p class="eyebrow rv">Featured projects</p><h2 class="rv" style="--d:1">My Projects</h2></div>
+          <a class="text-link rv" id="all-projects" hidden style="--d:2">View All Projects <i data-icon="arrow"></i></a>
+        </div>
+        <div class="grid grid-3" id="project-grid" data-stagger></div>
+      </div>
+    </section>
+
+    <!-- JOURNEY / EDUCATION / ACHIEVEMENTS -->
+    <section class="section s-bg" id="journey">
+      <div class="wrap triple">
+        <div>
+          <p class="eyebrow rv">My journey</p><h3 class="rv" style="--d:1">Experience &amp; Journey</h3>
+          <ol class="timeline" id="timeline" data-stagger></ol>
+        </div>
+        <div>
+          <p class="eyebrow rv">Education</p><h3 class="rv" style="--d:1">My Education</h3>
+          <div class="card list-card rv" id="education" style="--d:2"></div>
+        </div>
+        <div>
+          <p class="eyebrow rv">Credentials</p><h3 class="rv" style="--d:1">Certifications &amp; Participations</h3>
+          <div class="card list-card rv" id="achievements" style="--d:2"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section s-soft" id="contact">
+      <div class="wrap contact-grid">
+        <div>
+          <p class="eyebrow rv">Get in touch</p>
+          <h2 class="rv" style="--d:1">Have an idea?</h2>
+          <p class="rv" style="--d:2">Let's build something together.</p>
+          <p class="rv" id="email-wrap" style="--d:3"></p>
+        </div>
+        <ul class="contact-list" id="contact-list" data-stagger></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer s-band">
+    <div class="wrap footer-in">
+      <p>© 2026 Aryan Srivastav</p>
+      <ul class="icon-links" id="footer-socials"></ul>
+    </div>
+    <i class="spark spark-2" data-icon="sparkle" aria-hidden="true"></i>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
